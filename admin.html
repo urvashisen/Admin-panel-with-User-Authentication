@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="hero">
+        <nav class="nav-bar">
+           <a  id="logo" href="#">Coding Task</a>
+            <ul class="nav-items">
+                <li class=""><a href="#" >Home</a></li>
+                <li class="" ><a href="#" >About Us</a></li>
+                <li class="" ><a href="#">Contact</a></li>
+                <li class="" ><a href="#" >Features</a></li>
+            </ul>
+            <div id="nav-part2">
+                <button class="button" id="logout-btn">Log Out</button>  
+        </div>
+        </nav>
+        <div class="admin-container">
+            <h1>Hello, <span id="name"></span>!</h1>
+            <p>Welcome to the admin panel.</p>   
+        </div>
+        
+        <script>
+            window.onload = function() {
+            // retrive data from local storage
+            const loggedInUserEmail = localStorage.getItem('loggedInUserEmail');
+            
+            if (loggedInUserEmail) {
+                // Retrieve user data using the email
+                const user = JSON.parse(localStorage.getItem(loggedInUserEmail));
+                
+                if (user) {
+                    document.getElementById('name').textContent = user.name;
+                } else {
+                    // Redirect to login page if user data is not found
+                    console.log('User data not found in localStorage, redirecting to login page');
+                    window.location.href = 'index.html';
+                }
+            } else {
+                // Redirect to login page if logged-in user email is not found
+                console.log('Logged-in user email not found in localStorage, redirecting to login page');
+                window.location.href = 'index.html';
+            }
+            document.getElementById('logout-btn').addEventListener('click', function() {
+                    localStorage.removeItem('loggedInUserEmail');
+                    window.location.href = 'index.html';
+                });
+        }
+        </script>
+</body>
+</html>

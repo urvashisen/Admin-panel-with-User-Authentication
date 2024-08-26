@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Task</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "lV3h_T2zIHW63vsy-",
+      });
+   })();
+</script>
+</head>
+<body>
+    <div id="hero">
+        <nav class="nav-bar">
+           <a  id="logo" href="#">Coding Task</a>
+            <ul class="nav-items">
+                <li class=""><a href="#" >Home</a></li>
+                <li class="" ><a href="#" >About Us</a></li>
+                <li class="" ><a href="#">Contact</a></li>
+                <li class="" ><a href="#" >Features</a></li>
+            </ul>
+            <div id="nav-part2">
+                <button class="button" id="form-open">Log in</button>
+               
+        </div>
+        </nav>
+        <!-- home -->
+         <section class="Home">
+            <div class="form-container">
+                <i class="fa-solid fa-x" id="form-close"></i>
+                <!-- login-form -->
+                <div class="login-form">
+                    <form action="" id="login-form">
+                        <h2>Log in</h2>
+                        <div class="input-box">
+                            <i class="fa-solid fa-envelope email"></i>
+                            <input type="email" placeholder="Enter your email" required id="e-mail">
+                            <i class="fa-solid fa-lock password"></i>
+                            <input type="password" name="password" placeholder="Enter your password" required id="password-pwd">
+
+                        </div>
+                        <div class="options">
+                            <span class="checkbox">
+                                <input type="checkbox" id="check">
+                                <label for="check">Remember me</label>
+                            </span>
+                            <a href="#" class="forgotpwd_">Forgot Password?</a>
+                        </div>
+                        <button class="button" id="loginBtn" type="button" onclick="loginUser()">Login Now</button>
+                        <div class="login-signup">Don't have an account?<a href="#" id="signup">Signup</a>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- signup form -->
+                <div class="signup-form">
+                    <form action="" id="signupform">
+                        <h2>Sign up</h2>
+                        <div class="input-box">
+                            <i class="fa-solid fa-user name"></i>
+                            <input type="text" placeholder="Enter your name" required id="name">
+                            <i class="fa-solid fa-envelope e-mail"></i>
+                            <input type="email" placeholder="Enter your email" required id="email">
+                            <i class="fa-solid fa-lock pwd"></i>
+                            <input type="password" name="password" placeholder="Create password" required id="password">
+                            <i class="fa-solid fa-lock c_password"></i> 
+                            <input type="password" name="password" placeholder="Confirm password" required id="confirm-password">
+
+                        </div>
+                        
+                        <button class="button" type="button" id="signupBtn" >Signup Now</button>
+                        <div class="login-signup">Already have an account?<a href="#" id="login">Login</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+         </section> 
+         <script src="script.js" defer></script>      
+</body>
+</html>
