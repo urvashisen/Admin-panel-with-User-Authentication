@@ -28,6 +28,7 @@ Password: The user's password is displayed in a masked (dotted) format for secur
 Logout: Users can log out of the admin panel, which clears their session and redirects them to the login page.
 
 Data Management: All user information is stored in the browser's local storage, allowing for persistent data across sessions without a backend database.
+
 Responsive Design: The interface is designed to be responsive, providing a consistent experience across various devices.
 
 Technologies Used:
